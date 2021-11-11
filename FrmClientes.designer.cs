@@ -29,6 +29,7 @@ namespace AutomotrizApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.rbtnConCompra = new System.Windows.Forms.RadioButton();
@@ -63,7 +64,7 @@ namespace AutomotrizApp
             this.groupBox1.Controls.Add(this.dtpDesde);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(775, 147);
+            this.groupBox1.Size = new System.Drawing.Size(811, 107);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CRITERIOS DE BUSQUEDA";
@@ -71,7 +72,7 @@ namespace AutomotrizApp
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(352, 32);
+            this.label2.Location = new System.Drawing.Point(328, 32);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(302, 26);
             this.label2.TabIndex = 15;
@@ -82,7 +83,7 @@ namespace AutomotrizApp
             // rbtnConCompra
             // 
             this.rbtnConCompra.AutoSize = true;
-            this.rbtnConCompra.Location = new System.Drawing.Point(384, 72);
+            this.rbtnConCompra.Location = new System.Drawing.Point(360, 72);
             this.rbtnConCompra.Name = "rbtnConCompra";
             this.rbtnConCompra.Size = new System.Drawing.Size(87, 17);
             this.rbtnConCompra.TabIndex = 13;
@@ -93,7 +94,7 @@ namespace AutomotrizApp
             // rbtnSinCompra
             // 
             this.rbtnSinCompra.AutoSize = true;
-            this.rbtnSinCompra.Location = new System.Drawing.Point(520, 72);
+            this.rbtnSinCompra.Location = new System.Drawing.Point(496, 72);
             this.rbtnSinCompra.Name = "rbtnSinCompra";
             this.rbtnSinCompra.Size = new System.Drawing.Size(83, 17);
             this.rbtnSinCompra.TabIndex = 12;
@@ -103,7 +104,7 @@ namespace AutomotrizApp
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(688, 112);
+            this.btnLimpiar.Location = new System.Drawing.Point(688, 32);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(85, 25);
             this.btnLimpiar.TabIndex = 11;
@@ -113,7 +114,7 @@ namespace AutomotrizApp
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(597, 112);
+            this.btnConsultar.Location = new System.Drawing.Point(688, 72);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(85, 25);
             this.btnConsultar.TabIndex = 10;
@@ -159,6 +160,14 @@ namespace AutomotrizApp
             // 
             this.dgvClientes.AllowUserToAddRows = false;
             this.dgvClientes.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_cliente,
@@ -167,10 +176,10 @@ namespace AutomotrizApp
             this.cuilcuit,
             this.telefono,
             this.email});
-            this.dgvClientes.Location = new System.Drawing.Point(13, 168);
+            this.dgvClientes.Location = new System.Drawing.Point(16, 128);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
-            this.dgvClientes.Size = new System.Drawing.Size(775, 270);
+            this.dgvClientes.Size = new System.Drawing.Size(807, 270);
             this.dgvClientes.TabIndex = 1;
             // 
             // id_cliente
@@ -219,7 +228,7 @@ namespace AutomotrizApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(834, 411);
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

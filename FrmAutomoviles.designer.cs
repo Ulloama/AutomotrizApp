@@ -29,14 +29,9 @@ namespace AutomotrizApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.segmento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.combustible = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.transmision = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.nudHasta = new System.Windows.Forms.NumericUpDown();
             this.lblHasta = new System.Windows.Forms.Label();
@@ -54,6 +49,13 @@ namespace AutomotrizApp
             this.cboSegmento = new System.Windows.Forms.ComboBox();
             this.lblModelo = new System.Windows.Forms.Label();
             this.cboModelo = new System.Windows.Forms.ComboBox();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.segmento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.combustible = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.transmision = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHasta)).BeginInit();
@@ -64,6 +66,14 @@ namespace AutomotrizApp
             // 
             this.dgvProductos.AllowUserToAddRows = false;
             this.dgvProductos.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.descripcion,
@@ -76,57 +86,10 @@ namespace AutomotrizApp
             this.dgvProductos.Location = new System.Drawing.Point(12, 169);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvProductos.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProductos.Size = new System.Drawing.Size(810, 230);
             this.dgvProductos.TabIndex = 0;
-            // 
-            // descripcion
-            // 
-            this.descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.descripcion.HeaderText = "DESCRIPCION";
-            this.descripcion.Name = "descripcion";
-            this.descripcion.ReadOnly = true;
-            // 
-            // modelo
-            // 
-            this.modelo.HeaderText = "MODELO";
-            this.modelo.Name = "modelo";
-            this.modelo.ReadOnly = true;
-            this.modelo.Width = 110;
-            // 
-            // segmento
-            // 
-            this.segmento.HeaderText = "SEGMENTO";
-            this.segmento.Name = "segmento";
-            this.segmento.ReadOnly = true;
-            this.segmento.Width = 110;
-            // 
-            // combustible
-            // 
-            this.combustible.HeaderText = "COMBUSTIBLE";
-            this.combustible.Name = "combustible";
-            this.combustible.ReadOnly = true;
-            this.combustible.Width = 110;
-            // 
-            // transmision
-            // 
-            this.transmision.HeaderText = "TRANSMISION";
-            this.transmision.Name = "transmision";
-            this.transmision.ReadOnly = true;
-            this.transmision.Width = 110;
-            // 
-            // precio
-            // 
-            this.precio.HeaderText = "PRECIO $";
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
-            this.precio.Width = 80;
-            // 
-            // stock
-            // 
-            this.stock.HeaderText = "STOCK";
-            this.stock.Name = "stock";
-            this.stock.ReadOnly = true;
-            this.stock.Width = 70;
             // 
             // groupBox1
             // 
@@ -329,6 +292,55 @@ namespace AutomotrizApp
             this.cboModelo.Name = "cboModelo";
             this.cboModelo.Size = new System.Drawing.Size(121, 21);
             this.cboModelo.TabIndex = 4;
+            // 
+            // descripcion
+            // 
+            this.descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descripcion.HeaderText = "DESCRIPCION";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
+            // 
+            // modelo
+            // 
+            this.modelo.HeaderText = "MODELO";
+            this.modelo.Name = "modelo";
+            this.modelo.ReadOnly = true;
+            this.modelo.Width = 110;
+            // 
+            // segmento
+            // 
+            this.segmento.HeaderText = "SEGMENTO";
+            this.segmento.Name = "segmento";
+            this.segmento.ReadOnly = true;
+            this.segmento.Width = 110;
+            // 
+            // combustible
+            // 
+            this.combustible.HeaderText = "COMBUSTIBLE";
+            this.combustible.Name = "combustible";
+            this.combustible.ReadOnly = true;
+            this.combustible.Width = 110;
+            // 
+            // transmision
+            // 
+            this.transmision.HeaderText = "TRANSMISION";
+            this.transmision.Name = "transmision";
+            this.transmision.ReadOnly = true;
+            this.transmision.Width = 110;
+            // 
+            // precio
+            // 
+            this.precio.HeaderText = "PRECIO";
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
+            this.precio.Width = 80;
+            // 
+            // stock
+            // 
+            this.stock.HeaderText = "STOCK";
+            this.stock.Name = "stock";
+            this.stock.ReadOnly = true;
+            this.stock.Width = 70;
             // 
             // FrmAutomoviles
             // 

@@ -29,14 +29,15 @@ namespace AutomotrizApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvAutopartes = new System.Windows.Forms.DataGridView();
+            this.Limpiar = new System.Windows.Forms.Button();
+            this.btnConsultar = new System.Windows.Forms.Button();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lblModelo = new System.Windows.Forms.Label();
             this.cboModelo = new System.Windows.Forms.ComboBox();
-            this.Limpiar = new System.Windows.Forms.Button();
-            this.btnConsultar = new System.Windows.Forms.Button();
+            this.dgvAutopartes = new System.Windows.Forms.DataGridView();
             this.id_producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,23 +63,25 @@ namespace AutomotrizApp
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CRITERIOS DE BUSQUEDA";
             // 
-            // dgvAutopartes
+            // Limpiar
             // 
-            this.dgvAutopartes.AllowUserToAddRows = false;
-            this.dgvAutopartes.AllowUserToDeleteRows = false;
-            this.dgvAutopartes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAutopartes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_producto,
-            this.descripcion,
-            this.modelo,
-            this.precio,
-            this.stock,
-            this.stock_minimo});
-            this.dgvAutopartes.Location = new System.Drawing.Point(12, 172);
-            this.dgvAutopartes.Name = "dgvAutopartes";
-            this.dgvAutopartes.ReadOnly = true;
-            this.dgvAutopartes.Size = new System.Drawing.Size(810, 227);
-            this.dgvAutopartes.TabIndex = 1;
+            this.Limpiar.Location = new System.Drawing.Point(714, 123);
+            this.Limpiar.Name = "Limpiar";
+            this.Limpiar.Size = new System.Drawing.Size(85, 25);
+            this.Limpiar.TabIndex = 20;
+            this.Limpiar.Text = "LIMPIAR";
+            this.Limpiar.UseVisualStyleBackColor = true;
+            this.Limpiar.Click += new System.EventHandler(this.Limpiar_Click);
+            // 
+            // btnConsultar
+            // 
+            this.btnConsultar.Location = new System.Drawing.Point(616, 123);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(85, 25);
+            this.btnConsultar.TabIndex = 19;
+            this.btnConsultar.Text = "CONSULTAR";
+            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // lblDescripcion
             // 
@@ -113,25 +116,31 @@ namespace AutomotrizApp
             this.cboModelo.Size = new System.Drawing.Size(121, 21);
             this.cboModelo.TabIndex = 14;
             // 
-            // Limpiar
+            // dgvAutopartes
             // 
-            this.Limpiar.Location = new System.Drawing.Point(714, 123);
-            this.Limpiar.Name = "Limpiar";
-            this.Limpiar.Size = new System.Drawing.Size(85, 25);
-            this.Limpiar.TabIndex = 20;
-            this.Limpiar.Text = "LIMPIAR";
-            this.Limpiar.UseVisualStyleBackColor = true;
-            this.Limpiar.Click += new System.EventHandler(this.Limpiar_Click);
-            // 
-            // btnConsultar
-            // 
-            this.btnConsultar.Location = new System.Drawing.Point(616, 123);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(85, 25);
-            this.btnConsultar.TabIndex = 19;
-            this.btnConsultar.Text = "CONSULTAR";
-            this.btnConsultar.UseVisualStyleBackColor = true;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            this.dgvAutopartes.AllowUserToAddRows = false;
+            this.dgvAutopartes.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAutopartes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAutopartes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAutopartes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_producto,
+            this.descripcion,
+            this.modelo,
+            this.precio,
+            this.stock,
+            this.stock_minimo});
+            this.dgvAutopartes.Location = new System.Drawing.Point(12, 172);
+            this.dgvAutopartes.Name = "dgvAutopartes";
+            this.dgvAutopartes.ReadOnly = true;
+            this.dgvAutopartes.Size = new System.Drawing.Size(810, 227);
+            this.dgvAutopartes.TabIndex = 1;
             // 
             // id_producto
             // 
@@ -141,10 +150,10 @@ namespace AutomotrizApp
             // 
             // descripcion
             // 
-            this.descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.descripcion.HeaderText = "DESCRIPCION";
             this.descripcion.Name = "descripcion";
             this.descripcion.ReadOnly = true;
+            this.descripcion.Width = 230;
             // 
             // modelo
             // 
@@ -169,7 +178,7 @@ namespace AutomotrizApp
             this.stock_minimo.HeaderText = "STOCK MINIMO";
             this.stock_minimo.Name = "stock_minimo";
             this.stock_minimo.ReadOnly = true;
-            this.stock_minimo.Width = 110;
+            this.stock_minimo.Width = 130;
             // 
             // FrmAutopartes
             // 
